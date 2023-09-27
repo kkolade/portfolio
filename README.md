@@ -90,9 +90,9 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<pre>https://github.com/kkolade/kolakolade_portfolio</pre>
+<pre>https://github.com/kkolade/portfolio</pre>
 
-- `cd kolakolade`
+- `cd portfolio`
 - `code .` <!-- If you are using VS Code -->
 <!--
 Example commands:
@@ -100,7 +100,7 @@ Example commands:
 
 ### Install
 
-Install the packges required for this project with:
+Install the packages required for this project with:
 
 ```sh
   npm install
@@ -110,7 +110,7 @@ Install the packges required for this project with:
 
 To run the project, execute the following command:
 
-<pre>gulp</pre>
+<pre>npm run dev</pre>
 
 Open your browser and go to:
 <pre>http://localhost:3000/</pre>
@@ -143,7 +143,7 @@ Open your browser and go to:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kkolade/blog/issues).
+Feel free to check the [issues page](https://github.com/kkolade/portfolio/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
