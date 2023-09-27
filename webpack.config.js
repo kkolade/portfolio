@@ -13,6 +13,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new ESLintPlugin({
+      failOnError: false,
+      failOnWarning: false,
+      emitWarning: false,
+      emitError: false,
+    }),
   ],
   output: {
     filename: 'main.js',
