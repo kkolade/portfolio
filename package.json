@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "<!-- TABLE OF CONTENTS --> <img width=\"15%\" src=\"./kolakolade_favicon.png \"> # 📗 Table of Contents",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Kola Kolade",
+    "email": "kolakolade@gmail.com",
+    "url": "www.sprintplex.com"
+  },
+  "license": "MIT"
+}
