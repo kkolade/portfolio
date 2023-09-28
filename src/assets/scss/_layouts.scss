@@ -75,7 +75,7 @@
   }
 
   &__link {
-    color: b.$color-white;
+    color: b.color(text-1);
     position: relative;
 
     &::after {

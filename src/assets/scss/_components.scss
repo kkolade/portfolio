@@ -1,5 +1,27 @@
 @use 'base' as b;
 
+/* --- COMPONENTS --- */
+.social {
+  &__link {
+    color: b.color(text-2);
+  }
+
+  &-icon {
+    display: inline-block;
+    color: b.color(text-2);
+    transition: all 0.3s;
+
+    &:hover {
+      color: b.color(primary);
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: translateY(-2px);
+    }
+  }
+}
+
 /*--- COMPONENTS ---*/
 
 //------Alert-------
