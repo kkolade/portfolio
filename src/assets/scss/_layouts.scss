@@ -145,7 +145,7 @@
         background: b.color(primary);
         position: absolute;
         left: 0;
-        bottom: -b.$sp-0-75;
+        bottom: b.$sp-0-75 * -1;
         transition: 0.5s;
       }
 
