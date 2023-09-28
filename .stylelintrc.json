@@ -1,0 +1,42 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "@include",
+          "@mixin",
+          "@function"
+        ]
+      }
+    ],
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "scss/selector-no-redundant-nesting-selector": true
+  },
+  "ignoreFiles": [
+    "build/**",
+    "dist/**",
+    "**/reset*.css",
+    "**/bootstrap*.css",
+    "**/*.js",
+    "**/*.jsx"
+  ]
+}
