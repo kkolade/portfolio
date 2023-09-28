@@ -55,6 +55,46 @@
     display: none !important;
   }
 }
+
+/* ------Navigation------- */
+.hero {
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: b.$sp-3 * 8;
+  }
+
+  &__list {
+    display: inline-block;
+    margin: b.$sp-1 b.$sp-2;
+  }
+
+  &__link {
+    color: b.$color-white;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: b.$sp-0-25;
+      background: b.color(primary);
+      position: absolute;
+      left: 0;
+      bottom: -b.$sp-0-75;
+      transition: 0.25s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
 //------Alert-------
 
 //------header-------
