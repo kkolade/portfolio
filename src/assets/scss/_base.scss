@@ -133,13 +133,13 @@ $z-modal: 1000;
 @font-face {
   font-family: 'Veteran Typewriter';
   font-weight: 400;
-  src: url('../fonts/'); //IE-9 Compat Modes
   src:
-    url('../fonts/veteran_typewriter.ttf') format('embeded-opentype'),
-    url('../fonts/veteran_typewriter.ttf') format('woff'),
-    url('../fonts/veteran_typewriter.ttf') format('woff2'),
-    url('../fonts/veteran_typewriter.ttf') format('truetype'),
-    url('../fonts/veteran_typewriter.ttf') format('svg');
+    url('../fonts/veteran_typewriter/veteran_typewriter.ttf')
+      format('embeded-opentype'),
+    url('../fonts/veteran_typewriter/veteran_typewriter.ttf') format('woff'),
+    url('../fonts/veteran_typewriter/veteran_typewriter.ttf') format('woff2'),
+    url('../fonts/veteran_typewriter/veteran_typewriter.ttf') format('truetype'),
+    url('../fonts/veteran_typewriter/veteran_typewriter.ttf') format('svg');
 }
 
 // -----GLOBALS-----
@@ -157,7 +157,7 @@ body {
   font-family: $font-primary;
   font-size: font-size(normal);
   background-color: color(body);
-  color: color(text);
+  color: color(text-1);
 }
 
 *,
