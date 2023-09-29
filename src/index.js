@@ -4,6 +4,9 @@ import './assets/css/style.css';
 import aboutImage from './assets/images/kolakolade_4.png';
 import popupImage from './assets/images/kolakolade_5.png';
 import heroLogo from './assets/images/kolakolade_logo.png';
+import portfolioImage1 from './assets/images/work1.png';
+import portfolioImage2 from './assets/images/work2.png';
+import portfolioImage3 from './assets/images/work3.png';
 import './assets/scss/main.scss';
 
 // Import fontawesome
@@ -28,6 +31,10 @@ const aboutOverlay = document.querySelector('.about__overlay');
 const popup = document.querySelector('.about__popup');
 const popupClose = document.querySelector('.about__popup__close');
 const popupImg = document.querySelector('.about__popup__img');
+// Portfolio images
+const portfolioImg1 = document.querySelector('#portfolio__work__image-1');
+const portfolioImg2 = document.querySelector('#portfolio__work__image-2');
+const portfolioImg3 = document.querySelector('#portfolio__work__image-3');
 
 // Site logo
 logoDiv.src = heroLogo;
@@ -50,7 +57,7 @@ new Typewriter(typewriter, {
 const scrollFunction = () => {
     if (
         document.body.scrollTop > 300 ||
-      document.documentElement.scrollTop > 300
+    document.documentElement.scrollTop > 300
     ) {
         backToTopBtn.classList.remove('hidden');
     } else {
@@ -100,3 +107,8 @@ aboutOverlay.addEventListener('click', (e) => {
         aboutOverlay.classList.add('hidden');
     }
 });
+
+// Portfolio images
+portfolioImg1.src = portfolioImage1;
+portfolioImg2.src = portfolioImage2;
+portfolioImg3.src = portfolioImage3;
