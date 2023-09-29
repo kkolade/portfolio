@@ -34,38 +34,37 @@ logoDiv.src = heroLogo;
 
 // Typewriter text
 new Typewriter(typewriter, {
-  strings: [
-    'Full Stack Web Developer',
-    'Mobile App Developer',
-    'Wordpress Developer',
-    'Tech Enthusiast',
-  ],
-  autoStart: true,
-  typeSpeed: 100,
-  backSpeed: 50,
-  loop: true,
+    strings: [
+        'Full Stack Web Developer',
+        'Mobile App Developer',
+        'Wordpress Developer',
+        'Tech Enthusiast'
+    ],
+    autoStart: true,
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
 });
 
 // Back to top button
 const scrollFunction = () => {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    backToTopBtn.classList.remove('hidden');
-  } else {
-    backToTopBtn.classList.add('hidden');
-  }
+    if (
+        document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+        backToTopBtn.classList.remove('hidden');
+    } else {
+        backToTopBtn.classList.add('hidden');
+    }
 };
 
 window.onscroll = () => {
-  scrollFunction();
+    scrollFunction();
 };
 
-// When the user clicks on the button, scroll to the top of the document
 const topFunction = () => {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
 
 backToTopBtn.addEventListener('click', topFunction);
@@ -75,29 +74,29 @@ aboutImg.src = aboutImage;
 // About Overlay & Popup
 popupImg.src = popupImage;
 about.addEventListener('click', (e) => {
-  if (e.target.classList.contains('about__tab__link')) {
-    tabLinks.forEach((tab) => {
-      tab.classList.remove('active');
-    });
-    e.target.classList.add('active');
+    if (e.target.classList.contains('about__tab__link')) {
+        tabLinks.forEach((tab) => {
+            tab.classList.remove('active');
+        });
+        e.target.classList.add('active');
 
-    tabContents.forEach((content) => {
-      content.classList.remove('active');
-      if (e.target.textContent.toLowerCase() === content.id) {
-        content.classList.add('active');
-      }
-    });
-  }
+        tabContents.forEach((content) => {
+            content.classList.remove('active');
+            if (e.target.textContent.toLowerCase() === content.id) {
+                content.classList.add('active');
+            }
+        });
+    }
 });
 
 about.addEventListener('click', (e) => {
-  if (e.target.classList.contains('about__more')) {
-    aboutOverlay.classList.remove('hidden');
-  }
+    if (e.target.classList.contains('about__more')) {
+        aboutOverlay.classList.remove('hidden');
+    }
 });
 
 aboutOverlay.addEventListener('click', (e) => {
-  if (e.target === popupClose || e.target !== popup) {
-    aboutOverlay.classList.add('hidden');
-  }
+    if (e.target === popupClose || e.target !== popup) {
+        aboutOverlay.classList.add('hidden');
+    }
 });
