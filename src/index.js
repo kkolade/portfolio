@@ -49,8 +49,8 @@ new Typewriter(typewriter, {
 // Back to top button
 const scrollFunction = () => {
     if (
-        document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
+        document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
     ) {
         backToTopBtn.classList.remove('hidden');
     } else {
