@@ -15,10 +15,11 @@ import '@fortawesome/fontawesome-free/js/solid';
 // Site logo
 const logoDiv = document.querySelector('.hero__logo');
 // Typewriter text
-const typewriter = document.getElementById('typewriter');
+const typewriter = document.querySelector('#typewriter');
+// Back to top button
+const backToTopBtn = document.querySelector('.back-to-top');
 // About Image
 const aboutImg = document.querySelector('.about__img');
-console.log(aboutImg);
 // About Overlay & Popup
 const about = document.querySelector('#about');
 const tabLinks = document.querySelectorAll('.about__tab__link');
@@ -45,6 +46,29 @@ new Typewriter(typewriter, {
   loop: true,
 });
 
+// Back to top button
+const scrollFunction = () => {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    backToTopBtn.classList.remove('hidden');
+  } else {
+    backToTopBtn.classList.add('hidden');
+  }
+};
+
+window.onscroll = () => {
+  scrollFunction();
+};
+
+// When the user clicks on the button, scroll to the top of the document
+const topFunction = () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
+
+backToTopBtn.addEventListener('click', topFunction);
 // About Image
 aboutImg.src = aboutImage;
 
