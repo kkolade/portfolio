@@ -8,6 +8,15 @@ $color-black: #000;
 $color-grey: #777;
 $color-grey-dark: darken($color-grey, 25%);
 $color-grey-light: darken($color-white, 7.5%);
+$color-success-1: #4caf50;
+$color-success-2: #ddffdd;
+$color-error-1: #f44336;
+$color-error-2: #ffdddd;
+$color-error-3: #e91e63;
+$color-warning-1: #ffeb3b;
+$color-warning-2: #ffffcc;
+$color-info-1: #2196f3;
+$color-info-2: #ddffff;
 $primary: #ff004f;
 $secondary: #262626;
 $accent: #2754b7;
@@ -22,6 +31,7 @@ $color-map: (
   primary: $primary,
   secondary: $secondary,
   accent: $accent,
+  success: $color-success-2,
   text-1: $text-1,
   text-2: $text-2,
   text-3: $text-3,

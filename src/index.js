@@ -40,7 +40,7 @@ const portfolioImg3 = document.querySelector('#portfolio__work__image-3');
 const cv = document.querySelector('.contact__cv');
 // Contact form
 const contactForm = document.querySelector('form[name="submit-to-google-sheet"]');
-console.log(contactForm);
+const submitMsg = document.querySelector('#contact__submit__message');
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxOUWFGKbVcjy7kLumS_JEYnZWNYhEPJ3ag6V-iH452237mLNhQ2FyLZkIV4fLU5m1bSA/exec';
 
 // Site logo
@@ -123,25 +123,27 @@ portfolioImg3.src = portfolioImage3;
 // CV
 cv.href = cvPDF;
 
+// Contact form
 // Form Submission
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
+    // eslint-disable-next-line no-unused-vars
         .then((response) => {
-            // msg.innerText = 'Message sent successfully';
+            submitMsg.innerText = 'Message sent successfully';
             setTimeout(() => {
-                // msg.innerText = '';
-                console.log(response);
+                submitMsg.innerText = '';
             }, 3000);
             contactForm.reset();
         })
+    // eslint-disable-next-line no-unused-vars
         .catch((error) => {
-            // msg.innerText = 'Something went wrong';
-            // msg.style.color = 'red';
+            submitMsg.innerText = 'Something went wrong';
+            submitMsg.style.color = '#ffdddd';
             setTimeout(() => {
-                // msg.innerText = '';
-                console.log(error);
+                submitMsg.innerText = '';
             }, 3000);
             contactForm.reset();
         });
 });
+// Submit Message
