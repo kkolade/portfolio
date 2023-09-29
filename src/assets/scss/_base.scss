@@ -8,16 +8,24 @@ $color-black: #000;
 $color-grey: #777;
 $color-grey-dark: darken($color-grey, 25%);
 $color-grey-light: darken($color-white, 15%);
+$primary: #ff004f;
+$secondary: #262626;
+$accent: #2754b7;
+$text-1: $color-white;
+$text-2: #ababab;
+$text-3: lighten($primary, 20);
+$text-4: #343434;
+$body: #080808;
 
 $color-map: (
-  primary: #ff004f,
-  secondary: #262626,
-  accent: #2754b7,
-  text-1: $color-white,
-  text-2: #ababab,
-  text-3: #61b752,
-  text-4: #343434,
-  body: #080808,
+  primary: $primary,
+  secondary: $secondary,
+  accent: $accent,
+  text-1: $text-1,
+  text-2: $text-2,
+  text-3: $text-3,
+  text-4: $text-4,
+  body: $body,
 );
 
 // ------FONTS-------

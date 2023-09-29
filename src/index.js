@@ -2,6 +2,7 @@
 import Typewriter from 'typewriter-effect/dist/core';
 import './assets/css/style.css';
 import aboutImage from './assets/images/kolakolade_4.png';
+import popupImage from './assets/images/kolakolade_5.png';
 import heroLogo from './assets/images/kolakolade_logo.png';
 import './assets/scss/main.scss';
 
@@ -18,6 +19,14 @@ const typewriter = document.getElementById('typewriter');
 // About Image
 const aboutImg = document.querySelector('.about__img');
 console.log(aboutImg);
+// About Overlay & Popup
+const about = document.querySelector('#about');
+const tabLinks = document.querySelectorAll('.about__tab__link');
+const tabContents = document.querySelectorAll('.about__tab-content');
+const aboutOverlay = document.querySelector('.about__overlay');
+const popup = document.querySelector('.about__popup');
+const popupClose = document.querySelector('.about__popup__close');
+const popupImg = document.querySelector('.about__popup__img');
 
 // Site logo
 logoDiv.src = heroLogo;
@@ -38,3 +47,33 @@ new Typewriter(typewriter, {
 
 // About Image
 aboutImg.src = aboutImage;
+
+// About Overlay & Popup
+popupImg.src = popupImage;
+about.addEventListener('click', (e) => {
+  if (e.target.classList.contains('about__tab__link')) {
+    tabLinks.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+    e.target.classList.add('active');
+
+    tabContents.forEach((content) => {
+      content.classList.remove('active');
+      if (e.target.textContent.toLowerCase() === content.id) {
+        content.classList.add('active');
+      }
+    });
+  }
+});
+
+about.addEventListener('click', (e) => {
+  if (e.target.classList.contains('about__more')) {
+    aboutOverlay.classList.remove('hidden');
+  }
+});
+
+aboutOverlay.addEventListener('click', (e) => {
+  if (e.target === popupClose || e.target !== popup) {
+    aboutOverlay.classList.add('hidden');
+  }
+});
