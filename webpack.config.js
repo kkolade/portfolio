@@ -47,8 +47,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              // You can configure the output path and filename here if needed
-              name: 'assets/[name].[ext]',
+              name: 'assets/docs/[name].[ext]',
             },
           },
         ],
