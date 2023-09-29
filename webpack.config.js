@@ -19,6 +19,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[name][ext]',
     clean: true,
   },
   module: {
@@ -40,11 +41,23 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              // You can configure the output path and filename here if needed
+              name: 'assets/[name].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
   optimization: {
     minimize: true,
-    // minimizer: [new CssMinimizerPlugin()],
+    minimizer: [new CssMinimizerPlugin()],
   },
   devServer: {
     watchFiles: ['src/*.html'],

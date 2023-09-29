@@ -1,6 +1,7 @@
 /* eslint-env browser */
 import Typewriter from 'typewriter-effect/dist/core';
 import './assets/css/style.css';
+import cvPDF from './assets/docs/kolakolade.pdf';
 import aboutImage from './assets/images/kolakolade_4.png';
 import popupImage from './assets/images/kolakolade_5.png';
 import heroLogo from './assets/images/kolakolade_logo.png';
@@ -35,6 +36,8 @@ const popupImg = document.querySelector('.about__popup__img');
 const portfolioImg1 = document.querySelector('#portfolio__work__image-1');
 const portfolioImg2 = document.querySelector('#portfolio__work__image-2');
 const portfolioImg3 = document.querySelector('#portfolio__work__image-3');
+// CV
+const cv = document.querySelector('.contact__cv');
 
 // Site logo
 logoDiv.src = heroLogo;
@@ -112,3 +115,6 @@ aboutOverlay.addEventListener('click', (e) => {
 portfolioImg1.src = portfolioImage1;
 portfolioImg2.src = portfolioImage2;
 portfolioImg3.src = portfolioImage3;
+
+// CV
+cv.href = cvPDF;
