@@ -334,3 +334,18 @@
     margin-top: b.$sp-1-5;
   }
 }
+
+// footer
+.footer {
+  width: 100%;
+  height: b.$height-footer;
+  text-align: center;
+  padding: b.$sp-2 0;
+  background-color: b.color(secondary);
+  font-weight: b.font-weight(300);
+  margin-top: b.$sp-1;
+
+  .fa-heart {
+    color: b.color(primary);
+  }
+}
