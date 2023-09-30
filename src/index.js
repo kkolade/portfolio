@@ -42,6 +42,9 @@ const cv = document.querySelector('.contact__cv');
 const contactForm = document.querySelector('form[name="submit-to-google-sheet"]');
 const submitMsg = document.querySelector('#contact__submit__message');
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxOUWFGKbVcjy7kLumS_JEYnZWNYhEPJ3ag6V-iH452237mLNhQ2FyLZkIV4fLU5m1bSA/exec';
+// Footer Date
+const thisYear = new Date().getFullYear();
+const currentYear = document.getElementById('current-year');
 
 // Site logo
 logoDiv.src = heroLogo;
@@ -146,4 +149,6 @@ contactForm.addEventListener('submit', (e) => {
             contactForm.reset();
         });
 });
-// Submit Message
+
+// Footer Date
+currentYear.innerText = thisYear;
